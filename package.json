@@ -1,6 +1,6 @@
 {
   "name": "swagc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Seth McLaughlin",
   "license": "MIT",
   "bin": {
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "bluebird": "^2.9.12",
+    "grunt-release": "^0.11.0",
     "request": "^2.53.0"
   },
   "devDependencies": {
