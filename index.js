@@ -1,3 +1,1 @@
-module.exports = {
-  swagc: require('./lib/swagc')
-};
+module.exports = require('./lib/swagc');
