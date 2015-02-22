@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+var spec = process.argv[2];
+
+require('../').swagc({ spec: process.argv[2] }).then(function (client) {
+  console.log('API\n----');
+  client.usage();
+});
