@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mocha-istanbul');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-release');
+  grunt.loadNpmTasks('grunt-babel');
 
   var src  = ['lib/**/*.js', 'index.js', 'bin/*'];
   var test = ['test/**/*.js'];
@@ -13,7 +14,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     clean : {
       doc : 'doc',
-      unit : 'coverage/unit'
+      unit : 'coverage/unit',
+      es5 : 'es5'
     },
     eslint: {
       options: {
@@ -59,12 +61,15 @@ module.exports = function(grunt) {
         tasks : ['test:fast']
       }
     },
-    release: {
+    babel: {
       options: {
-        github: { 
-          repo: 'sethmcl/swagc', //put your user/repo here
-          usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username 
-          passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
+        sourceMap: true
+      },
+      es5: {
+        files: {
+          "es5/swagc.js": "lib/swagc.js",
+          "es5/Operation.js": "lib/Operation.js",
+          "es5/Client.js": "lib/Client.js"
         }
       }
     }
