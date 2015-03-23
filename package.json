@@ -1,15 +1,16 @@
 {
   "name": "swagc",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Seth McLaughlin",
   "license": "MIT",
   "scripts": {
     "test": "./node_modules/.bin/grunt",
-    "prepublish": "./node_modules/.bin/grunt babel"
+    "prepublish": "./node_modules/.bin/grunt es5"
   },
   "files": [
-    "./es5"
+    "es5/"
   ],
+  "main": "es5/swagc.js",
   "dependencies": {
     "babel": "^4.7.16",
     "bluebird": "^2.9.12",

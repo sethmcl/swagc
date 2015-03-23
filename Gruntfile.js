@@ -67,7 +67,7 @@ module.exports = function(grunt) {
       },
       es5: {
         files: {
-          "es5/index.js": "lib/swagc.js",
+          "es5/swagc.js": "lib/swagc.js",
           "es5/Operation.js": "lib/Operation.js",
           "es5/Client.js": "lib/Client.js"
         }
@@ -80,4 +80,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['eslint', 'clean:unit', 'mocha_istanbul']);
   grunt.registerTask('test:integration', ['mochaTest']);
   grunt.registerTask('test:unit', ['mochaTest']);
+  grunt.registerTask('es5', ['clean:es5', 'babel']);
 };

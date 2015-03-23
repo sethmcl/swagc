@@ -1,1 +1,1 @@
-module.exports = require('./lib/swagc');
+module.exports = require('./es5/swagc');
