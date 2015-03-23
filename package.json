@@ -3,9 +3,6 @@
   "version": "0.0.5",
   "author": "Seth McLaughlin",
   "license": "MIT",
-  "bin": {
-    "swagc": "./bin/swagc"
-  },
   "scripts": {
     "test": "./node_modules/.bin/grunt",
     "prepublish": "./node_modules/.bin/grunt babel"
