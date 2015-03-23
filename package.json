@@ -8,8 +8,11 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/grunt",
-    "postinstall": "./node_modules/.bin/grunt babel"
+    "prepublish": "./node_modules/.bin/grunt babel"
   },
+  "files": [
+    "./es5"
+  ],
   "dependencies": {
     "babel": "^4.7.16",
     "bluebird": "^2.9.12",

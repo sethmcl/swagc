@@ -67,7 +67,7 @@ module.exports = function(grunt) {
       },
       es5: {
         files: {
-          "es5/swagc.js": "lib/swagc.js",
+          "es5/index.js": "lib/swagc.js",
           "es5/Operation.js": "lib/Operation.js",
           "es5/Client.js": "lib/Client.js"
         }
